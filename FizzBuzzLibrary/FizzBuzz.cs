@@ -24,10 +24,10 @@ namespace FizzBuzz
 
         public string Convert(int number)
         {
-            string result = string.Empty;
+            StringBuilder result = new();
             foreach (Foo foo in foos)
             {
-                result += foo.ToString(number);
+                result.Append(foo.ToString(number));
             }
 
             return result.Length == 0 ? number.ToString() : result.ToString();
