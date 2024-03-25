@@ -14,9 +14,8 @@ namespace FizzBuzz
         public void Print()
         {
             string keyword = string.Empty;
-            string stopCondition = foos.Aggregate(new StringBuilder(), (sb, foo) => sb.Append(foo.ToString(foo.number))).ToString();
 
-            for (int i = 1; keyword != stopCondition; i++)
+            for (int i = 1; keyword != GetStopCondition(); i++)
             {
                 keyword = Convert(i);
                 Console.WriteLine(keyword);
@@ -33,5 +32,7 @@ namespace FizzBuzz
 
             return result.Length == 0 ? number.ToString() : result.ToString();
         }
+
+        private string GetStopCondition() => foos.Aggregate(new StringBuilder(), (sb, foo) => sb.Append(foo.ToString(foo.number))).ToString();
     }
 }
