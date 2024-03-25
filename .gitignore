@@ -1,0 +1,16 @@
+target
+**/*.iml
+.idea
+**/__pycache__
+**/*.pyc
+.cache
+out/
+build/
+.gradle/
+.DS_Store
+.vscode
+.vs
+bin
+obj
+packages
+.idea
